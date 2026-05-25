@@ -458,20 +458,20 @@ footer{
     margin-bottom:20px;
     color:#1d2940;
 
-    white-space:nowrap;   /* INI KUNCI BIAR 1 BARIS */
+    white-space:nowrap;
 }
 
-/* ================= POSTER FIX TOTAL ================= */
+/* ================= POSTER ================= */
 
 .poster-container img{
     width:100%;
     max-width:900px;
-    height:auto;           /* PENTING: biar tidak kepotong */
-    object-fit:contain;    /* bukan cover */
+    height:auto;
+    object-fit:contain;
     border-radius:25px;
 }
 
-/* ================= GALLERY FIX ================= */
+/* ================= GALLERY ================= */
 
 .gallery-wrapper{
     width:100%;
@@ -492,15 +492,15 @@ footer{
 .gallery-grid .poster{
     grid-column:1 / -1;
     width:100%;
-    height:auto;        /* FIX UTAMA */
-    object-fit:contain; /* FIX UTAMA */
+    height:auto;
+    object-fit:contain;
     border-radius:15px;
 }
 
 /* semua gambar */
 .gallery-grid img{
     width:100%;
-    height:auto;        /* JANGAN FIX HEIGHT */
+    height:auto;
     object-fit:contain; /* biar full gambar kelihatan */
     border-radius:15px;
     display:block;
