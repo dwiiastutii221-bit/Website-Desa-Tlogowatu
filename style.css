@@ -1,0 +1,531 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    background:#fff;
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#1d2940;
+    text-decoration:none;
+    font-weight:bold;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+nav a:hover,
+.active{
+    background:#dff5e4;
+    color:green;
+}
+
+/* ================= HERO ================= */
+
+.hero-modern{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-modern img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6));
+}
+
+.hero-top{
+    position:absolute;
+    top:30px;
+    left:50px;
+    right:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.5);
+    padding:20px 30px;
+    border-radius:10px;
+    z-index:10;
+}
+
+.hero-logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.hero-logo img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#fff;
+    padding:5px;
+    object-fit:cover;
+}
+
+.hero-logo h2,
+.hero-menu a,
+.hero-content{
+    color:#fff;
+}
+
+.hero-menu{
+    display:flex;
+    gap:30px;
+}
+
+.hero-menu a{
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-menu a:hover{
+    color:#00ff88;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50px;
+    transform:translateY(-50%);
+    z-index:10;
+}
+
+.hero-content h1{
+    font-size:75px;
+    line-height:1.1;
+    margin-bottom:20px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#fff;
+    text-shadow:0 5px 15px rgba(0,0,0,.35);
+}
+
+.hero-desc{
+    display:flex;
+    gap:40px;
+    max-width:1000px;
+}
+
+.hero-desc p{
+    width:400px;
+    font-size:18px;
+}
+
+/* ================= LAYOUT ================= */
+
+.container,
+.profil-utama,
+.data-section,
+.download-section,
+.info-desa{
+    width:90%;
+    margin:auto;
+    padding:70px 0;
+}
+
+.title,
+.profil-title{
+    text-align:center;
+    font-size:55px;
+    color:#1d2940;
+    margin-bottom:15px;
+}
+
+.subtitle,
+.profil-desc{
+    text-align:center;
+    font-size:20px;
+    color:#4f5b70;
+    max-width:900px;
+    margin:auto auto 40px;
+}
+
+/* ================= GRID ================= */
+
+.cards,
+.data-grid,
+.download-grid,
+.profil-list-horizontal,
+.berita-grid,
+.info-top{
+    display:grid;
+    gap:25px;
+}
+
+.cards{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.data-grid{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+
+.download-grid{
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+
+.profil-list-horizontal{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.berita-grid{
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    margin-top:40px;
+}
+
+.info-top{
+    grid-template-columns:1fr 1fr;
+    margin-top:40px;
+}
+
+/* ================= CARD ================= */
+
+.card,
+.card-hover,
+.profil-item,
+.download-card,
+.data-card,
+.berita-card,
+.info-card,
+.maps-card{
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card,
+.card-hover,
+.download-card,
+.data-card,
+.info-card,
+.maps-card{
+    padding:25px;
+}
+
+.profil-item{
+    padding:18px;
+    display:flex;
+    align-items:center; 
+    gap:15px;
+}
+
+.card:hover,
+.card-hover:hover,
+.profil-item:hover,
+.download-card:hover,
+.data-card:hover,
+.berita-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ================= ICON ================= */
+
+.icon-box,
+.profil-item i{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon-box{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.green{ background:#ddf8e5; color:#00aa3c; }
+.blue{ background:#dfe9ff; color:#2f6df5; }
+.pink{ background:#ffe0f1; color:#ff2ca0; }
+.orange{ background:#fff0dd; color:orange; }
+
+.profil-item i{
+    background:#e9fff1;
+    color:#00aa3c;
+    font-size:22px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display:inline-block;
+    background:#00aa3c;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    margin-top:15px;
+}
+
+.btn:hover{
+    background:#008a31;
+}
+
+/* ================= DATA ================= */
+
+.data-container{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    margin-top:25px;
+}
+
+.data-title{
+    background:#00aa3c;
+    color:#fff;
+    padding:16px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.data-card{
+    text-align:center;
+}
+
+.laki{ background:#eef4ff; }
+.perempuan{ background:#fff0f7; }
+.total{ background:#edf9ef; }
+
+/* ================= BERITA ================= */
+
+.berita-card{
+    overflow:hidden;
+    position:relative;
+}
+
+.berita-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.berita-content{
+    padding:25px;
+}
+
+.berita-content span{
+    display:inline-block;
+    background:#e9fff1;
+    color:#00aa3c;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.berita-content h2{
+    font-size:24px;
+    color:#1d2940;
+}
+
+/* ================= JAM ================= */
+
+.clock-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.clock-box{
+    width:120px;
+    height:140px;
+    background:#000;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.clock-box span{
+    color:#fff;
+    font-size:70px;
+    font-weight:bold;
+}
+
+.tanggal{
+    text-align:center;
+    margin-top:25px;
+    font-size:28px;
+}
+
+/* ================= CUACA ================= */
+
+.cuaca-card{
+    text-align:center;
+}
+
+/* ================= MAPS ================= */
+
+.maps-card{
+    margin-top:30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#1d2940;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* ================= SEJARAH ================= */
+
+.sejarah{
+    width:90%;
+    margin:auto;
+    padding:100px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 1s ease;
+}
+
+.sejarah.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.sejarah-text{
+    max-width:900px;
+    text-align:center;
+}
+
+/* ================= POSTER ================= */
+
+.poster-section{
+    width:90%;
+    margin:auto;
+    padding:100px 0 70px;
+    text-align:center;
+}
+
+.poster-container{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+}
+
+.gallery-title{
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    margin-top:40px;
+    margin-bottom:20px;
+    color:#1d2940;
+
+    white-space:nowrap;   /* INI KUNCI BIAR 1 BARIS */
+}
+
+/* ================= POSTER FIX TOTAL ================= */
+
+.poster-container img{
+    width:100%;
+    max-width:900px;
+    height:auto;           /* PENTING: biar tidak kepotong */
+    object-fit:contain;    /* bukan cover */
+    border-radius:25px;
+}
+
+/* ================= GALLERY FIX ================= */
+
+.gallery-wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:50px 0;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:20px;
+    width:90%;
+    max-width:900px;
+}
+
+/* poster di dalam gallery */
+.gallery-grid .poster{
+    grid-column:1 / -1;
+    width:100%;
+    height:auto;        /* FIX UTAMA */
+    object-fit:contain; /* FIX UTAMA */
+    border-radius:15px;
+}
+
+/* semua gambar */
+.gallery-grid img{
+    width:100%;
+    height:auto;        /* JANGAN FIX HEIGHT */
+    object-fit:contain; /* biar full gambar kelihatan */
+    border-radius:15px;
+    display:block;
+}
+
+/* hover */
+.gallery-grid img:hover{
+    transform:scale(1.03);
+    transition:0.3s;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:200px;
+    }
+
+    .hero-content h1,
+    .title{
+        font-size:40px;
+    }
+}
