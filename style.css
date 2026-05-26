@@ -80,11 +80,9 @@ nav a:hover,
     top:30px;
     left:50px;
     right:50px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     background:rgba(0,0,0,.5);
     padding:20px 30px;
     border-radius:10px;
