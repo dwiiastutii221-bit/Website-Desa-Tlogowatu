@@ -99,3 +99,7 @@ document.addEventListener("scroll", function () {
     }
 
 });
+
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
