@@ -16,20 +16,31 @@
 <body>
 
 <!-- navigasi -->
-<nav>
+<div class="hero-top">
 
-    <div class="logo-area">
-        <h2 class="logo-text">Desa Tlogowatu</h2>
+    <div class="hero-logo">
+        <img src="gambar/logo.png" alt="Logo Desa">
+        <h2>DESA TLOGOWATU</h2>
     </div>
 
-    <ul>
-        <li><a href="index.html">BERANDA</a></li>
-        <li><a class="active" href="profil.html">PROFIL</a></li>
-        <li><a href="kegiatan.html">KEGIATAN</a></li>
-    </ul>
+    <!-- tombol hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 
-</nav>
+    <!-- menu -->
+    <div class="hero-menu" id="menu">
 
+        <a href="index.html">BERANDA</a>
+
+        <a href="profil.html" class="active">PROFIL</a>
+
+        <a href="kegiatan.html">KEGIATAN</a>
+
+    </div>
+
+</div>
+    
 <!-- profil utama -->
 <section class="profil-utama">
 
